@@ -1,9 +1,22 @@
 import requests
-from tkinter import *
+import tkinter as tk
 import math
 
 API_KEY = "3ace7596caad5c7cebbc0e883eeb0fef"
-city_name = input("Enter City: ")
+
+root = tk.Tk()
+
+root.geometry("1280x720")
+root.title("Weather App 1")
+root.configure(background='light blue')
+
+label = tk.Label(root,background='light blue', text="Hello World!", font=('Helvetica',36))
+label.pack(padx=20,pady=20)
+myentry = tk.Entry(root,width=20,font=('Helvetica',24))
+city_name = myentry.get()
+myentry.pack()
+
+root.mainloop()
 
 def get_weather(api_key, city):
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
@@ -22,3 +35,4 @@ def get_weather(api_key, city):
     print("Humidity: " + str(humidity) + "%")
 
 get_weather(API_KEY,city_name)
+
