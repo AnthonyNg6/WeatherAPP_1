@@ -10,11 +10,9 @@ root.geometry("1280x720")
 root.title("Weather App 1")
 root.configure(background='light blue')
 
-label = tk.Label(root,background='light blue', text="Hello World!", font=('Helvetica',36))
-label.pack(padx=20,pady=20)
 myentry = tk.Entry(root,width=20,font=('Helvetica',24))
 city_name = myentry.get()
-myentry.pack()
+myentry.pack(padx=20,pady=50)
 
 root.mainloop()
 
