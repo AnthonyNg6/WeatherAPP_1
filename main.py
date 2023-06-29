@@ -1,18 +1,23 @@
 import requests
-import tkinter as tk
 import math
+import customtkinter
 
 API_KEY = "3ace7596caad5c7cebbc0e883eeb0fef"
 
-root = tk.Tk()
 
-root.geometry("1280x720")
+customtkinter.set_appearance_mode("dark")
+customtkinter.set_default_color_theme("blue")
+
+root = customtkinter.CTk()
+root.geometry("500x700")
 root.title("Weather App 1")
 root.configure(background='light blue')
 
-myentry = tk.Entry(root,width=20,font=('Helvetica',24))
+
+myentry = customtkinter.CTkEntry(root,width=350,justify='center',font=("Verdana",36))
+myentry.pack(padx=20,pady=75)
 city_name = myentry.get()
-myentry.pack(padx=20,pady=50)
+
 
 root.mainloop()
 
